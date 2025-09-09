@@ -14,9 +14,8 @@ This parser produces a the log file `goose.log`, defined in [scripts/main.zeek](
 This script is available as a package for [Zeek Package Manager](https://docs.zeek.org/projects/package-manager/en/stable/index.html). It requires [Spicy](https://docs.zeek.org/projects/spicy/en/latest/) and the [Zeek Spicy plugin](https://docs.zeek.org/projects/spicy/en/latest/zeek.html).
 
 ```bash
-$ cd IEC61850/GOOSE
-$ cmake . && make install
-$ zeek -NN | grep ANALYZER_SPICY_GOOSE
+cmake . && make install
+zeek -NN | grep ANALYZER_SPICY_GOOSE
 ```
 
 If this package is installed from `zkg` it will be added to the available plugins. This can be tested by running `zeek -NN`. If installed correctly you will see `ANALYZER_SPICY_GOOSE` under the list of `Zeek::Spicy` analyzers.
@@ -31,7 +30,7 @@ This parser evaluates ethernet or VLAN frames with an ethertype of `0x88b8`.
 
 #### Fields Captured
 
-The following data fileds (specified in IEC 61850-8-1 Annex A.3) are written to `goose.log`.
+The following data fields (specified in IEC 61850-8-1 Annex A.3) are written to `goose.log`.
 
 | Field           | Type   | Description                             | Reference |
 |-----------------|--------|-----------------------------------------|-----------|
@@ -55,7 +54,7 @@ The software was developed on behalf of the [BSI](https://www.bsi.bund.de) \(Fed
 
 ## Licenses
 
-Copyright (c) 2023 by DINA-Community. [See License](/LICENSE)
+Copyright (c) 2023-2025 by DINA-Community. [See License](/LICENSE)
 
 ### Third party licenses
 

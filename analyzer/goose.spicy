@@ -53,7 +53,7 @@ public type Message = unit {
 	allData: ASN1::ASN1Message(True)[] &parse-from=self.goosePDUdata.back().application_data;
 
 	var timestamp: bytes;
-	var encoding: hilti::Charset;
+	var encoding: spicy::Charset;
 	var value: string;
 	var first_part: bytes;
 	var second_part: bytes;
